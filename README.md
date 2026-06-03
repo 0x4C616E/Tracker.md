@@ -4,6 +4,15 @@ This is a list of links tracking my personal cyber Community contributions
 CVE-2026-34916-RCE revive-adserver
 CVE-2026-34917-Improper Authentication revive-adserver
 
+
+
+CVE-2026-8327 . Prior to the fix, Concrete CMS was vulnerable to password change without reauthorization and session-hardening bypass. The user-profile edit controller passed the entire raw POST array to UserInfo::update() without field whitelisting, allowing password changes without requiring the current password and while also enabling registered users to disable the per-user IP-pinning in the session validator intended to detect hijacking. The Concrete CMS security team gave this vulnerability a CVSS v.4.0 score of 5.3 with vector CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N. Thanks 0x4c616e for reporting H1 3636712.
+
+CVE-2026-7887 . Prior to the fix, Concrete CMS OAuth 2.0 Authorization-Code Handler bypassed account status checks. A user with uIsActive=0 (suspended, banned, or terminated) could still authenticate via OAuth and receive valid API tokens. The Concrete CMS security team gave this vulnerability a CVSS v.4.0 score of 2.3 with vector CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N. Thanks 0x4c616e for reporting H1 3636728.
+
+CVE-2026-7890-Fixed CVE-2026-7890 Prior to the fix, the RSS Displayer block accepted a feed URL from any page editor and fetched it server-side without validation, enabling redirect-to-internal bypasses. The Concrete CMS security team gave this vulnerability a CVSS v.4.0 score of 2.1 with vector CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:N/VI:L/VA:N/SC:L/SI:N/SA:N. Thanks 0x4c616e for reporting H1 3636720.
+
+
 https://www.revive-adserver.com/security/revive-sa-2026-002/
 
 ========================================================================
@@ -54,3 +63,6 @@ References
 https://hackerone.com/reports/3672641
 https://github.com/revive-adserver/revive-adserver/commit/50c7dd3ba
 https://cwe.mitre.org/data/definitions/287.html
+
+
+Link:https://documentation.concretecms.org/9-x/developers/introduction/version-history/951-release-notes
