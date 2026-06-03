@@ -6,6 +6,7 @@ CVE-2026-34917-Improper Authentication revive-adserver
 
 https://www.revive-adserver.com/security/revive-sa-2026-002/
 
+========================================================================
 Remote Code Execution
 ========================================================================
 Vulnerability Type: CWE-94: Code Injection
